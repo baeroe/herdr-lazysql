@@ -1,0 +1,24 @@
+id = "herdr-lazysql"
+name = "Lazysql"
+version = "0.1.0"
+min_herdr_version = "0.9.3"
+description = "Run lazysql (TUI database client) in a herdr split pane or its own tab."
+platforms = ["macos", "linux"]
+
+[[panes]]
+id = "lazysql"
+title = "lazysql"
+placement = "split"
+command = ["lazysql"]
+
+[[actions]]
+id = "open-lazysql"
+title = "Open lazysql"
+description = "Toggle lazysql in a split pane."
+command = ["bash", "scripts/toggle-lazysql.sh", "split"]
+
+[[actions]]
+id = "open-lazysql-tab"
+title = "Open lazysql (tab)"
+description = "Toggle lazysql in its own tab."
+command = ["bash", "scripts/toggle-lazysql.sh", "tab"]
